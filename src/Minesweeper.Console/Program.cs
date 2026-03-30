@@ -1,0 +1,12 @@
+﻿using System;
+
+namespace Minesweeper
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Fill in later with stuff.
+        }
+    }
+}
