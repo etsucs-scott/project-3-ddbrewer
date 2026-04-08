@@ -1,10 +1,6 @@
 ﻿using System;
 using Minesweeper.Core;
 
-// To test behavior: 
-// dotnet build
-// dotnet run --project src/Minesweeper.Console
-
 namespace Minesweeper
 {
     class Program
