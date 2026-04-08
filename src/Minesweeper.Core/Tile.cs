@@ -1,6 +1,6 @@
 namespace Minesweeper.Core
 {
-    public class Tile
+    public class Tile // Represents a single tile of the minesweeper board, stores all states needed for gameplay / display
     {
         public bool HasMine { get; set; }
         public bool IsRevealed { get; set; }

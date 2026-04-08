@@ -2,7 +2,7 @@ using System;
 
 namespace Minesweeper.Core
 {
-    public class HighScoreEntry
+    public class HighScoreEntry // Represents a single high score file record stored in the csv file
     {
         public BoardSize Size { get; set; }
         public int Seconds { get; set; }

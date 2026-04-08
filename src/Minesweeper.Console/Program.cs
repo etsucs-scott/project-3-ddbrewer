@@ -11,7 +11,7 @@ namespace Minesweeper
     {
         static void Main(string[] args)
         {
-            BoardSize size = GetBoardSizeFromUser();
+            BoardSize size = GetBoardSizeFromUser(); // Collects the user's set up choices before creating the game board
             int seed = GetSeedFromUser();
 
             MinesweeperGame game = new MinesweeperGame(size, seed);
@@ -23,12 +23,12 @@ namespace Minesweeper
 
             bool playerQuit = false;
 
-            while (!game.IsGameOver && !playerQuit)
+            while (!game.IsGameOver && !playerQuit) // Main gameplay loop, keeps refreshing the board and accepting commands until game is won/lost/quit
             {
                 PrintBoard(game);
                 Console.WriteLine();
                 Console.WriteLine("Enter command: r row col, f row col, or q");
-                Console.WriteLine("> ");
+                Console.Write("> ");
 
                 string input = Console.ReadLine();
 
@@ -62,7 +62,7 @@ namespace Minesweeper
             {
                 Console.WriteLine("Choose board size: ");
                 Console.WriteLine("1 - Small (8x8, 10 mines)");
-                Console.WriteLine("2 - Medium (12x12, 25 mines");
+                Console.WriteLine("2 - Medium (12x12, 25 mines)");
                 Console.WriteLine("3 - Large (16x16, 40 mines)");
                 Console.WriteLine("Enter your choice: ");
 
@@ -95,7 +95,7 @@ namespace Minesweeper
                 Console.Write("Enter a seed, or press Enter to generate a random one: ");
                 string userSeed = Console.ReadLine();
 
-                if (string.IsNullOrWhiteSpace(userSeed))
+                if (string.IsNullOrWhiteSpace(userSeed)) // Blank input generates a seed from the current time
                 {
                     int generatedSeed = DateTime.Now.Ticks.GetHashCode();
                     return generatedSeed;
@@ -161,7 +161,7 @@ namespace Minesweeper
                 {
                     bool changed = game.RevealTile(row, column);
 
-                    if (!changed)
+                    if (!changed) // RevealTile returns false for invalid move input
                     {
                         Console.WriteLine("That tile is flagged and cannot be revealed. Please unflag it before revealing.");
                     }

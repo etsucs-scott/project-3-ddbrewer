@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper.Core", "src\Min
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper.Console", "src\Minesweeper.Console\Minesweeper.Console.csproj", "{BA9C2965-F065-46F0-A512-155726E8ED0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Minesweeper.Tests", "Minesweeper.Tests\Minesweeper.Tests.csproj", "{8414A001-FB6B-4C1D-AC40-6999C486DF3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,18 @@ Global
 		{BA9C2965-F065-46F0-A512-155726E8ED0D}.Release|x64.Build.0 = Release|Any CPU
 		{BA9C2965-F065-46F0-A512-155726E8ED0D}.Release|x86.ActiveCfg = Release|Any CPU
 		{BA9C2965-F065-46F0-A512-155726E8ED0D}.Release|x86.Build.0 = Release|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Debug|x64.Build.0 = Debug|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Debug|x86.Build.0 = Debug|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Release|x64.ActiveCfg = Release|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Release|x64.Build.0 = Release|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Release|x86.ActiveCfg = Release|Any CPU
+		{8414A001-FB6B-4C1D-AC40-6999C486DF3F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

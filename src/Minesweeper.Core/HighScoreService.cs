@@ -5,7 +5,7 @@ using System.IO;
 
 namespace Minesweeper.Core
 {
-    public class HighScoreService
+    public class HighScoreService // Handles all high score actions: loading from, saving to, sorting and trimming the CSV
     {
         private const string Header = "size,seconds,moves,seed,timestamp";
 

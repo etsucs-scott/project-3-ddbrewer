@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Minesweeper.Core
 {
-    public class MinesweeperGame
+    public class MinesweeperGame // Contains the main game state and rules including board set up, mine placement, revealing, flagging, and checking win/loss
     {
         public Tile[,] Board { get; private set; }
         public int Rows { get; private set; }
@@ -58,7 +58,7 @@ namespace Minesweeper.Core
             }
         }
 
-        private void PlaceMines()
+        private void PlaceMines() // Uses the seed to generate the mine placement, so it's consistent between games
         {
             Random random = new Random(Seed);
             int minesPlaced = 0;
@@ -153,7 +153,7 @@ namespace Minesweeper.Core
                 return true;
             }
 
-            if (tile.AdjacentMineCount == 0)
+            if (tile.AdjacentMineCount == 0) // Reveals the neighboring safe tiles when a zero is found
             {
                 RevealEmptyArea(row, column);
             }
@@ -162,7 +162,7 @@ namespace Minesweeper.Core
             return true;
         }
 
-        private void RevealEmptyArea(int startRow, int startColumn)
+        private void RevealEmptyArea(int startRow, int startColumn) // Uses a queue-based flood fill to reveal connected zero tiles
         {
             Queue<(int row, int column)> queue = new Queue<(int row, int column)>();
             queue.Enqueue((startRow, startColumn));
@@ -202,7 +202,7 @@ namespace Minesweeper.Core
 
                         neighbor.IsRevealed = true;
 
-                        if (neighbor.AdjacentMineCount == 0)
+                        if (neighbor.AdjacentMineCount == 0) // Zero tile neighbors continue the cascade 
                         {
                             queue.Enqueue((newRow, newColumn));
                         }
@@ -222,7 +222,7 @@ namespace Minesweeper.Core
 
             Tile tile = Board[row, column];
 
-            if (tile.IsRevealed)
+            if (tile.IsRevealed) // Revealed tiles cannot be flagged
             {
                 return false;
             }
@@ -250,7 +250,7 @@ namespace Minesweeper.Core
             IsWin = true;
         }
 
-        private bool IsInsideBoard(int row, int column)
+        private bool IsInsideBoard(int row, int column) // Checks whether a position is within the boundaries of the board
         {
             if (row < 0 || row >= Rows)
             {
@@ -265,7 +265,7 @@ namespace Minesweeper.Core
             return true;
         }
 
-        private void ValidateCoordinates(int row, int column)
+        private void ValidateCoordinates(int row, int column) // Throws an exception when entered coords are invalid
         {
             if (!IsInsideBoard(row, column))
             {
